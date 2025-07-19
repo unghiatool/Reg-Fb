@@ -102,11 +102,6 @@
 </div>
 
 <div class="box">
-    <h2>💻 Code Setup trên Windows</h2>
-    <button onclick="copySetupCodeWindows()">Copy Code</button>
-</div>
-
-<div class="box">
     <h2>📱 Link Termux</h2>
     <a href="https://play.google.com/store/apps/details?id=com.termux&hl=vi"_blank">Link tải Termux</a>
 </div>
@@ -123,18 +118,20 @@
 
 <script>
     function copySetupCodeTermux() {
-        const setupCode = `termux-setup-storage && pkg update && pkg upgrade && pkg install python git wget curl openssl-tool clang proot libffi && pip install requests bs4 colorama`;
+        const setupCode = `🔥Lệnh Setup (Python)  
+termux-setup-storage && pkg update && pkg upgrade -y && pkg install python php && pkg install python-pip && pip install --upgrade pip 
+👉Nó Hiện "  [Y/n] hoặc [Y/I/N/O/D/Z] " thì nhấn {y} hết cho mình👈
+
+👉Cách Fix Lỗi Chưa Tải Thư Viện Python Khi Gặp Lỗi No Module named 👈
+pip install "tên_thư_viện"
+
+👉Lệnh Nâng Cấp Python 3.11 ⬆ 3.12👈
+pkg install python --upgrade  
+
+👉Lệnh Hạ Python 3.12 ⬇ 3.11👈
+pkg i tur-repo -y && pkg uninstall python -y && pkg uninstall python3.11 -y && pkg install python3.11 -y && mv -f /data/data/com.termux/files/usr/bin/python3.11 /data/data/com.termux/files/usr/bin/python`;
         navigator.clipboard.writeText(setupCode.trim()).then(function () {
             alert("✅ Đã copy Code Setup trên Termux!");
-        }, function (err) {
-            alert("❌ Lỗi copy: " + err);
-        });
-    }
-
-    function copySetupCodeWindows() {
-        const setupCodeWin = `python -m pip install --upgrade pip && pip install requests colorama bs4 pystyle faker pysocks`;
-        navigator.clipboard.writeText(setupCodeWin.trim()).then(function () {
-            alert("✅ Đã copy Code Setup trên Windows!");
         }, function (err) {
             alert("❌ Lỗi copy: " + err);
         });
