@@ -346,12 +346,20 @@
             const loichuc2 = document.getElementById('loichuc2');
             const loichuc3 = document.getElementById('loichuc3');
             const loichuc4 = document.getElementById('loichuc4');
-            xungho = tachChuDau(ten)
-            giaovien.textContent = `Kính gửi ${ten}`;
-            loichuc1.textContent = `Nhân ngày Nhà Giáo Việt Nam 20/11`;
-            loichuc2.textContent = `Xin gửi đến ${xungho} lời chúc tốt đẹp nhất`;
-            loichuc3.textContent = `Chúc ${xungho} luôn mạnh khỏe, hạnh phúc`;
-            loichuc4.textContent = `Và ngập tràn niềm vui!`;
+            if (ten!==null){
+              xungho = tachChuDau(ten)
+              giaovien.textContent = `Kính gửi ${ten}`;
+              loichuc1.textContent = `Nhân ngày Nhà Giáo Việt Nam 20/11`;
+              loichuc2.textContent = `Xin gửi đến ${xungho} lời chúc tốt đẹp nhất`;
+              loichuc3.textContent = `Chúc ${xungho} luôn mạnh khỏe, hạnh phúc`;
+              loichuc4.textContent = `Và ngập tràn niềm vui!`;
+            }else {
+              giaovien.textContent = ``;
+              loichuc1.textContent = ``;
+              loichuc2.textContent = ``;
+              loichuc3.textContent = ``;
+              loichuc4.textContent = ``;
+            }
         }
 
         function showFlowerAnimation() {
