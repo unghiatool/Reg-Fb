@@ -94,6 +94,13 @@ body.animation-mode {
     font-weight: bold;
     color: #ff99ff;
 }
+.wishes-text .signature {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: #ff99ff;
+}
 @keyframes fade-in-wishes {
     to {
         opacity: 1;
